@@ -28,7 +28,7 @@ namespace MMTShop.Api.Controllers
         /// Returns featured products
         /// </summary>
         /// <returns></returns>
-        [HttpGet("/featured")]
+        [HttpGet("featured", Name = "GetFeaturedProducts")]
         public async Task<ActionResult<IEnumerable<ProductDto>>> GetFeaturedProducts()
         {
             try

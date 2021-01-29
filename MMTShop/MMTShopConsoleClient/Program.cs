@@ -11,7 +11,7 @@ namespace MMTShopConsoleClient
             ApiManager apiManager = new ApiManager();
 
             Console.WriteLine("1a.Featured products");
-            apiManager.GetAllCategories();
+            apiManager.GetFeaturedProducts();
             Console.WriteLine("1a. Finished successfully");
 
             Console.WriteLine("1b. Available categories");

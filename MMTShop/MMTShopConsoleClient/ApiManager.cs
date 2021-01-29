@@ -26,5 +26,16 @@ namespace MMTShopConsoleClient
                 Console.WriteLine(Environment.NewLine + result);
             }
         }
+
+        public void GetFeaturedProducts()
+        {
+            using (var client = new WebClient())
+            {
+                client.Headers.Add("Content-Type:application/json"); //Content-Type  
+                client.Headers.Add("Accept:application/json");
+                var result = client.DownloadString($"https://localhost:44332/api/product/featured"); //URI featured products
+                Console.WriteLine(Environment.NewLine + result);
+            }
+        }
     }
 }
